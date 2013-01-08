@@ -1,5 +1,7 @@
 require "devconf/version"
 
+$stdout.sync = true
+
 Rails.logger = Logger.new(STDOUT).tap do |logger|
   # defaults to debug log level for `rails *` commands, app servers and DJ workers
   rails = $0 == 'script/rails'
